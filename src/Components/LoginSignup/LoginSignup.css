@@ -1,0 +1,117 @@
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+.underline {
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin-top: 0.5rem;
+}
+
+/* Inputs container styling */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.input img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+}
+
+.input input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+.input:focus-within {
+    border-color: #007bff;
+}
+
+/* Forgot password styling */
+.forgot-password {
+    font-size: 0.875rem;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-password span {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.forgot-password span:hover {
+    color: #0056b3;
+}
+
+/* Submit container styling */
+.submit-container {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.submit {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #007bff;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #0056b3;
+}
+
+.gray{
+    background: #EAEAEA;
+    color: #676767;
+}
