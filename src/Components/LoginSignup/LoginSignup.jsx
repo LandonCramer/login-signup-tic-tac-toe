@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./LoginSignup.css";
+// import "./LoginSignup.css";
 
 import user_icon from "../Assets/icons8-user-24.png";
 import email_icon from "../Assets/icons8-email-24.png";
@@ -11,7 +11,7 @@ const LoginSignup = () => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
-    password: ""
+    password: "",
   });
   const navigate = useNavigate();
 
@@ -20,14 +20,15 @@ const LoginSignup = () => {
   };
 
   const handleSubmit = async () => {
-    const url = action === "Sign Up" ? "http://127.0.0.1:5000/register" : "http://127.0.0.1:5000/login";
+    const url =
+      action === "Sign Up" ? "http://127.0.0.1:5000/register" : "http://127.0.0.1:5000/login";
     try {
       const response = await fetch(url, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
       const data = await response.json();
       if (response.ok) {
@@ -95,16 +96,14 @@ const LoginSignup = () => {
           className={action === "Login" ? "submit gray" : "submit"}
           onClick={() => {
             setAction("Sign Up");
-          }}
-        >
+          }}>
           Sign Up
         </div>
         <div
           className={action === "Sign Up" ? "submit gray" : "submit"}
           onClick={() => {
             setAction("Login");
-          }}
-        >
+          }}>
           Login
         </div>
         <div className="submit" onClick={handleSubmit}>
